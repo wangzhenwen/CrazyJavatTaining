@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 //使用默认的空格分隔符
 public class ScannerSplit
 {
