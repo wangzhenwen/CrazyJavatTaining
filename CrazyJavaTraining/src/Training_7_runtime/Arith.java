@@ -1,8 +1,5 @@
 package Training_7_runtime;
-
 import java.math.BigDecimal;
-
-
 /**
  * 运算工具类
  * @author nuts
