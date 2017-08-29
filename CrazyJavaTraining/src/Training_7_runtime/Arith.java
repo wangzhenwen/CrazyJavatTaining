@@ -23,6 +23,7 @@ public class Arith
 	   BigDecimal b2 = BigDecimal.valueOf(v2);
 	   return b1.add(b2).doubleValue();
    }
+   
    /**
     * 提供精确的减法运算
     * @param v1 被减数
