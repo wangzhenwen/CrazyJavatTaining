@@ -14,7 +14,7 @@ public class FileInputStreamTest
     {
 		 File file = new File("");
     	//创建字节输入流
-    	FileInputStream fiS  = new FileInputStream(file.getAbsolutePath()+"/src/Training_15_InOut/FileTestInputStreamTest.java");
+    	FileInputStream fiS  = new FileInputStream(file.getAbsolutePath()+"/src/Training_15_InOut/FileInputStreamTest.java");
     	//创建一个长度为1024的“竹筒”
     	byte [] bbuf = new byte[1024];
     	//用于保存实际读取的字节数
