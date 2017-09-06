@@ -1,11 +1,7 @@
 package Training_7_runtime;
-
-import org.omg.CORBA.SystemException;
-
 /**
  * 数学工具类的使用
  * @author nuts
- *
  */
 public class MathTest
 {
@@ -43,5 +39,41 @@ public class MathTest
         System.out.println("Math.ceil(1.2)"+Math.ceil(1.2));
         //四舍五入取整
         System.out.println("Math.round(2.3)"+Math.round(2.3));
+        /*--------------------下面是乘方、开方、指数运算--------------------------*/
+        //计算平方根
+        System.out.println("Math.sqrt(2.3)"+Math.sqrt(2.3));
+        //计算立方根
+        System.out.println("Math.cbrt(9)"+Math.cbrt(9));
+        //返回欧拉数e的n次幂
+        System.out.println("Math.exp(2)"+Math.exp(2));
+        //返回sqrt（x2+y2），没有中间溢出或下溢
+        System.out.println("Math.hypot(4,4)"+Math.hypot(4, 4));
+        //按照IEEE754标准的规定，对晾干参数进行余数运算
+        System.out.println("Math.IEEEremainder(5,2):"+Math.IEEEremainder(5, 2));
+        //计算乘方
+        System.out.println("Math.pow(3,2)"+Math.pow(3, 2));
+        //计算自然对数
+        System.out.println("Math.log(12)"+Math.log(12));
+        //计算底数为10的对数
+        System.out.println("Math.log10(9)"+Math.log10(9));
+        //返回参数与1之和的自然对数
+        System.out.println("Math.loglp(9)"+Math.log1p(9));
+        /*------------------------下面是符号相关的运算-------------------------------*/
+        //计算绝对值
+        System.out.println("Math.abs(-4.5)"+Math.abs(-4.5));
+        //符号赋值，返回带有第二个浮点数符号的第一个浮点参数
+        System.out.println("Math.copySign(1.2,-1.0)"+Math.copySign(1.2, -1.0));
+        //符号函数，如果参数为0,则返回0,如果参数大于0
+        //则返回1;如果参数小于0,则返回-1.0
+        System.out.println("Math.signum(2.3):"+Math.signum(2.3));
+        /*-----------下面是大小相关的运算------------*/
+        //找出最大值
+        System.out.println("Math.max(2.3,4.5)"+Math.max(2.3, 4.5));
+        //计算最小值
+        System.out.println("Math.min(1.2,1.0)"+Math.min(1.2, 1));
+        //返回第一个参数和第二个参数之间与第一个参数相邻的浮点数
+        System.out.println("Math.nextAfter(1.2,1.0)"+Math.nextAfter(1.2, 1.0));
+        //返回一个伪随机数，该值大于等于0.0且小于1.0
+        System.out.println("Math.random()"+Math.random());
     }
 }
