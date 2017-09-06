@@ -23,7 +23,11 @@ class User implements Cloneable
 	  return (User)super.clone();
   }
 	}
-
+/**
+ * ∂‘œÛøΩ±¥≤‚ ‘
+ * @author nuts
+ *
+ */
 public class CloneTest {
  public static void main(String [] args) throws CloneNotSupportedException
  {

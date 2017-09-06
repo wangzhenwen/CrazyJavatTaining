@@ -1,5 +1,10 @@
 package Training_7_runtime;
 
+/**
+ * IdentityHashCode≤‚ ‘
+ * @author nuts
+ *
+ */
 public class IdentityHashCodeTest
 {
    public static void main (String [] args)

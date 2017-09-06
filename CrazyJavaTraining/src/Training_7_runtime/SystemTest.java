@@ -5,7 +5,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Map;
 import java.util.Properties;
-
+/**
+ * 获取系统环境变量测试
+ * @author nuts
+ *
+ */
 public class SystemTest
 {
    public static void main(String [] args)

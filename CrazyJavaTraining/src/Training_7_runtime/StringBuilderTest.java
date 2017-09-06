@@ -1,5 +1,9 @@
 package Training_7_runtime;
-
+/**
+ * StringBulderÀà²âÊÔ
+ * @author nuts
+ *
+ */
 public class StringBuilderTest
 {
   public static void main(String [] args)
@@ -8,7 +12,7 @@ public class StringBuilderTest
 	  //×·¼Ó×Ö·û´®
 	  sBuilder.append("java"); //sBuilder ="java";
 	  //²åÈë
-	  sBuilder.insert(0, "hello  ");//sBuilder = "hello  ";
+	  sBuilder.insert(0, "hello  ");//sBuilder = "hello  java";
 	  //Ìæ»»  º¬Í·²»º¬Î²
 	  sBuilder.replace(5, 6, ","); //sBuilder ="hello, java";
 	  System.out.println(sBuilder.toString());

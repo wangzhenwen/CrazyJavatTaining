@@ -3,7 +3,11 @@ package Training_7_runtime;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
+/**
+ * 扫描一个文本文件
+ * @author nuts
+ *
+ */
 public class ScannerFileTest
 {
    public static void main(String [] args)

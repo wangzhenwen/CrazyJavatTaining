@@ -1,7 +1,11 @@
 package Training_7_runtime;
 
 import java.util.Calendar;
-
+/**
+ * Calerndar  set 方法生效延时测试
+ * @author nuts
+ *
+ */
 public class LazyTest {
 	public static void main(String[] args) {
        Calendar cal = Calendar.getInstance();

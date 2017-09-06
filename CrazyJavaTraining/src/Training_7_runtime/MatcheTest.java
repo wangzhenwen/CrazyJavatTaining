@@ -2,7 +2,10 @@ package Training_7_runtime;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+/**
+ * 正则表达式匹配测试
+ * @author nuts
+ */
 public class MatcheTest {
   public static void main(String [] args) {
 	  String  [] mails={"wangzhenwen@163.com",

@@ -1,7 +1,11 @@
 package Training_7_runtime;
 
 import java.util.Calendar;
-
+/**
+ * πÿ±’Calendar »›¥Ì–‘≤‚ ‘
+ * @author nuts
+ *
+ */
 public class LenientTest
 {
 	public static void main(String [] args)

@@ -2,7 +2,11 @@ package Training_15_InOut;
 
 import java.io.File;
 import java.io.IOException;
-
+/**
+ * 文件类测试
+ * @author nuts
+ *
+ */
 public class TestFile {
   public static void main(String [] args) throws IOException
   {  //以当前路经来创建一个File对象

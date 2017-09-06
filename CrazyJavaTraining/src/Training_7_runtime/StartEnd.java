@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * start()和end()方法主要用于确定子串在目标字符串的位置
+ *  Matcher 类 的start()和end()方法主要用于确定子串在目标字符串的位置
  * @author wangzhenwen
  *
  */

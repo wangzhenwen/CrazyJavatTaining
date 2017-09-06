@@ -1,7 +1,11 @@
 package Training_7_runtime;
 
 import java.util.Scanner;
-
+/**
+ * 只接收Long 型的屏幕输入并打印在屏幕上
+ * @author nuts
+ *
+ */
 public class ScannerLongTest
 {
    public static void main (String [] args)

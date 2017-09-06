@@ -2,7 +2,11 @@ package Training_7_runtime;
 
 import java.util.Arrays;
 import java.util.TimeZone;
-
+/**
+ * 获取系统时区测试
+ * @author nuts
+ *
+ */
 public class TimeZoneTest {
 	public static void main(String [] args)
 	{

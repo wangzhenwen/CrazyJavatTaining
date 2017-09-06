@@ -23,11 +23,11 @@ public class StringNodeTest
 	  int leng=0;
 	  StringReader stringReader = new StringReader(src);
 	  try
-	  {   //采用循环读取的方式读取字符串
+	  {   //采用循环读取的方式读取字符串,将字符串的每个字符读入进chars
 		  while((leng=stringReader.read(chars))>0)
 		  {
 			System.out.print(new String(chars,0,leng));  
-			Thread.sleep(50);
+			Thread.sleep(100);
 		  }
 	  }catch (Exception e)
 	  {
