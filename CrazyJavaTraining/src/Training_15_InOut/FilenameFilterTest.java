@@ -11,6 +11,7 @@ public class FilenameFilterTest {
   public static void main(String [] args)
   {
 	  File file = new File(".");
+	  file = new File(file.getAbsolutePath()+File.separator+"src"+File.separator+"Training_15_InOut");
 	  String [] nameList = file.list(new MyFilenameFilter());
 	  for(String name:nameList)
 	  {
@@ -25,7 +26,7 @@ class MyFilenameFilter implements FilenameFilter
 	@Override
 	public boolean accept(File dir, String name) {
 		// TODO Auto-generated method stub
-		//如果文件名以.java结尾，或者文件对应一个路径，则返回ture
-		return name.endsWith(".java")||new File(name).isDirectory();
+		//如果文件名以.java结尾
+		return name.endsWith(".java");
 	}
 	}
