@@ -18,13 +18,14 @@ public class FileOutputStreamTest
 		try
 		{
 			FileInputStream fileInputStream = new FileInputStream(myFile.getAbsolutePath() + "/src/Training_15_InOut/FileOutputStreamTest.java");
-			File newFile = new File(myFile.getAbsolutePath() + "/src/Training_15_InOut/test.txt");
-			    if(newFile.exists()==false)
-			    {
-			     
-				 newFile.createNewFile();
-				 }
-			FileOutputStream fileOutputStream = new FileOutputStream(newFile);
+			//File newFile = new File(myFile.getAbsolutePath() + "/src/Training_15_InOut/test.txt");
+			//    if(newFile.exists()==false)
+			//    {
+			//     
+			//	 newFile.createNewFile();
+			//	 }
+			//FileOutputStream fileOutputStream = new FileOutputStream(newFile);
+			FileOutputStream fileOutputStream = new FileOutputStream(myFile.getAbsolutePath()+"/src/test.txt");
 			byte[] buf = new byte[32];
 			int len = 0;
 			while ((len = fileInputStream.read(buf)) > 0)
