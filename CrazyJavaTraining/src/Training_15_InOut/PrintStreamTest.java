@@ -14,7 +14,7 @@ public class PrintStreamTest
 	{
 		try{
 			File myPath = new File("");
-			//先构建一个节点
+			//先构建一个节点,false 表示每次写入都覆盖这个文件
 			FileOutputStream fos = new FileOutputStream(myPath.getAbsolutePath()+"/src/Training_15_InOut/"+"tests.txt",false);
 			//再用该节点构建一个处理流
 			PrintWriter ps = new PrintWriter(fos);
