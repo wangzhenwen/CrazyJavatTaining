@@ -1,22 +1,17 @@
 package reflect;
-
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
-
 class Emp {
 	public Emp() {
 		System.out.println("..emp()...");
 	}
-
 	public Emp(String name) {
 		System.out.println("..emp(String name)..." + name);
 	}
-
 	private Emp(String name, int age) {
 		System.out.println("..emp(String name ,int age)..." + name + "," + age);
 	}
 }
-
 /**
  * 调用构造器，创建对象
  * 
@@ -44,8 +39,6 @@ public class ConstructorInvokeDemo {
 	     Constructor<Emp> css = clz.getDeclaredConstructor(String.class,int.class);
 	     System.out.println(css);
 	     css.setAccessible(true);
-	     Emp ecss=css.newInstance("wangzhenwen",33);
-	     
-	    
+	     Emp ecss=css.newInstance("wangzhenwen",33);    
 	}
 }
