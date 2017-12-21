@@ -1,0 +1,17 @@
+package Training_11_AWT;
+
+import java.awt.Frame;
+/**
+ * ¥∞ÃÂ≤‚ ‘
+ * @author wangzhenwen
+ *
+ */
+public class FrameTest {
+	public static void main (String  [] args)
+	{
+		Frame f = new  Frame("≤‚ ‘¥∞ø⁄");
+		f.setBounds(30,30,250,200);
+		f.setVisible(true);
+	}
+
+}
