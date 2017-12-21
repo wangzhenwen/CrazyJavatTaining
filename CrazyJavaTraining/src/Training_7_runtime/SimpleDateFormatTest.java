@@ -4,6 +4,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.xml.crypto.Data;
+
 /**
  * SimpleDateFormat∂‘œÛ≤‚ ‘
  * @author wangzhenwen
@@ -50,5 +52,10 @@ public class SimpleDateFormatTest {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
+	  SimpleDateFormat sdf3 = new SimpleDateFormat("yyyyMMdd");
+	
+	  Date nowdate  = new Date();
+	  String nowdates=sdf3.format(nowdate);
+	  System.out.println(nowdates);
   }
 }
