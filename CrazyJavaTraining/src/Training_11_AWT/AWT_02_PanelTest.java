@@ -9,7 +9,7 @@ import java.awt.TextField;
  * @author wangzhenwen
  *
  */
-public class PanelTest {
+public class AWT_02_PanelTest {
     public static void main (String [] args)
     {
     	//创建一个Panel容器

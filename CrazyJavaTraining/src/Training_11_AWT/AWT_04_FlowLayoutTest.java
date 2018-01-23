@@ -8,7 +8,7 @@ import java.awt.Frame;
  * @author wangzhenwen
  *
  */
-public class FlowLayoutTest {
+public class AWT_04_FlowLayoutTest {
    public static void main(String [] args)
    {
 	   Frame frame  = new Frame("²âÊÔ´°¿Ú");

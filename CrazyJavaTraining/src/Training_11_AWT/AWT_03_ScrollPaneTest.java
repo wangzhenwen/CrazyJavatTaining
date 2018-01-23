@@ -10,7 +10,7 @@ import java.awt.TextField;
  * @author wangzhenwen
  *
  */
-public class ScrollPaneTest {
+public class AWT_03_ScrollPaneTest {
   public static void main(String [] args)
   {
 	  /**
