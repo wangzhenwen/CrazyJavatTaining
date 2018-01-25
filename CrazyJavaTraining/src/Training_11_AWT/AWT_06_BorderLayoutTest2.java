@@ -11,7 +11,7 @@ public class AWT_06_BorderLayoutTest2 {
 	public static void main(String [] args)
 	{
 		Frame frame = new Frame();
-		//设置Frame容器使用BorderLayout布局管理器
+		//设置Frame容器使用BorderLayout布局管理器，水平间距30,垂直间距5
 		frame.setLayout(new BorderLayout(30,5));
 		//创建一个Panel对象
 		Panel panel  = new Panel();
