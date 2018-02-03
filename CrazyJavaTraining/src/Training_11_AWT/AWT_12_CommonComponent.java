@@ -10,9 +10,7 @@ import java.awt.List;
 import java.awt.Panel;
 import java.awt.TextArea;
 import java.awt.TextField;
-
-import javax.swing.colorchooser.ColorChooserComponentFactory;
-import javax.swing.text.TabableView;
+import javax.swing.Box;
 
 public class AWT_12_CommonComponent {
 	
@@ -51,8 +49,25 @@ public class AWT_12_CommonComponent {
 		//创建一个装载下拉选择框，三个CheckBox的Panel
 		Panel checkPanel = new Panel();
 		checkPanel.add(colorChooser);
-		
-		
+		checkPanel.add(male);
+		checkPanel.add(femal);
+		checkPanel.add(married);
+		//创建一个垂直排列组件的Box，盛装多行文本域、Panel
+		Box topLeft = Box.createVerticalBox();
+		topLeft.add(ta);
+		topLeft.add(checkPanel);
+		//创建一个垂直排列组件的Box，盛装topLeft  colorList
+		Box  top = Box.createHorizontalBox();
+		top.add(topLeft);
+		top.add(colorList);
+		//将top Box 容器添加到窗口的中间
+		frame.add(top);
+		frame.pack();
+		frame.setVisible(true);
 	}
-
+  public static void main(String [] args)
+  {
+	   new AWT_12_CommonComponent().init();
+  }
+  
 }
