@@ -73,5 +73,39 @@ mysqladmin -u用户名 -p旧密码 password 新密码
   alter table hehe modify hehe_name varchar(255) null;
   #取消非空约束并指定默认值
   alter table hehe modify hehe_name varchar(255) default 'abc' null;
-  
-      
+  16.unique 约束 
+    #建表时创建唯一约束，使用列级约束语法建立约束
+    create table unique_test
+    (
+      #建立非空约束，这意味着test_id不可以为null
+      test_Id int not null,
+       #unique 就是唯一约束，使用列级约束语法建立唯一约束
+       test_name varchar(255) unique
+    );
+    当建立唯一约束时，MySql在唯一约束所在列或列组合上建立对应的唯一索引
+    表级约束语法格式
+    [constrain 约束名] 约束定义
+    #建表时创建唯一约束，使用表级约束语法建立约束
+    create table unique_test2
+    (
+      #建立非空约束，这意味着test_id不可以为null
+      test_id int not null,
+      test_name varchar(255),
+       test_pass varchar(255),
+       #使用表级约束建立唯一约束
+       unique (test_name),
+       #使用表级约束建立唯一约束，而且指定约束名
+       constraint test2_uk unique( test_pass)
+    );
+      test_name 与 test_pass 都不能重复
+   
+    # test_name组合test_pass起来不能重复
+   create table unique_test3
+   (
+      test_id int not null,
+      test_name varchar(255),
+      test_pass varchar(255),
+       #使用表级约束语法建立唯一约束,指定两列组合不能为空
+      constraint test3_uk unique(test_name,test_pass) 
+   ) ;
+    
