@@ -1,0 +1,77 @@
+mysql 命令:
+1.添加密码
+mysqladmin -u用户名 password 密码
+2.修改密码：
+mysqladmin -u用户名 -p旧密码 password 新密码
+3.登录mysql环境
+ mysql -h地址 -u用户名 -p密码
+ 例子：
+ mysql -h127.0.0.1 -uroot -p19841955
+ 4.查看包含多少数据库
+ show databases;
+ 5.删除数据库:
+ drop databases 数据库名;
+ 6.创建数据库
+ create database [ IF NOT EXISTS ] 数据名;
+ 7.进入指定数据
+ use 数据库名;
+ 8.查看有多少个表
+ show tables;
+ 9.查看表结构
+ desc 表明;
+ 10. 建表 
+ 例子:
+ 1.
+  create table test
+  (
+    #整型通常int
+    test_id int,
+    #小数点数
+     test_price decimal,
+     #普通长度文本,使用default 指定默认值
+     test_name varchar(255) default 'xxx',
+     #大文本类型
+     test_desc text,
+     #图片
+     test_img blob,
+      test_date datetime
+  );
+  2.  create table haha
+   as select * from user_inf;
+    创建的 haha 表结构与user_inf一致
+  11.修改表
+  #将test表的test_id列修改varchar(255)类型
+   alter table test modify test_id varchar(255);
+  #将test表的test_id列修改int类型
+   alter table test modify test_id int;
+  #将test表中增加newclo int类型
+   alter table test add newclo int;
+  #将test表中的newclo列删除
+   alter table test drop newclo;
+  #将test表中的newclo列改名为clo 并修改为varchar(20)
+    alter table test change newclo clo varchar(20);
+  12.修改表名:
+  #将test表改为test_new
+    alter table test rename to test_new;
+  13.删除表
+  drop table 表名;
+  14.删除表中所有数据，保留表结构
+  truncate 表名;
+  15.not null 约束
+  create table hehe
+  (
+    #建立非空约束，这一位这hehe_id不能为null
+    hehe_id int not null,
+    #Mysql的非空约束不能指定名字
+    hehe_name varchar(255) default 'xyz' not null,
+    #下面的列可以为空，默认值就是可以为空
+    hehe_gender varchar(2) null
+  );
+  #增加非空约束
+  alter table hehe modify hehe_gender  varchar(2) not null;
+  #取消非空约束
+  alter table hehe modify hehe_name varchar(255) null;
+  #取消非空约束并指定默认值
+  alter table hehe modify hehe_name varchar(255) default 'abc' null;
+  
+      
