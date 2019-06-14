@@ -82,6 +82,7 @@ mysqladmin -u用户名 -p旧密码 password 新密码
        #unique 就是唯一约束，使用列级约束语法建立唯一约束
        test_name varchar(255) unique
     );
+    
     当建立唯一约束时，MySql在唯一约束所在列或列组合上建立对应的唯一索引
     表级约束语法格式
     [constrain 约束名] 约束定义
