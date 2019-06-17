@@ -18,7 +18,7 @@ mysqladmin -u用户名 -p旧密码 password 新密码
  8.查看有多少个表
  show tables;
  9.查看表结构
- desc 表明;
+ desc 表明; 
  10. 建表 
  例子:
  1.
@@ -109,4 +109,52 @@ mysqladmin -u用户名 -p旧密码 password 新密码
        #使用表级约束语法建立唯一约束,指定两列组合不能为空
       constraint test3_uk unique(test_name,test_pass) 
    ) ;
+   #删除约束
+   alter table unique_test drop index test3_uk;
+  #为haha表的test_name列增加唯一约束
+  alter table haha modify hehe_name varchar(255) unique;
+  17.primary key
+  #列级约束语法
+  create table primary_test
+  (
+    #建立了主键约束
+    test_Id int primary key,
+    test_name varchar(255) 
+  )
+  #创建主键约束使用表级
+  create table primary_test2
+  (
+   test_id int not null,
+   test_name varchar(255),
+   test_pass varchar(255),
+   #指定主键约束名为test2_pk,对大部分数据库有效，但是对MYSQ无效
+   #MYSQL数据库中该表主键约束名依然是primary
+   constraint test2_pk primary key(test_id)
+  )
+  #以多列建立主键，只能使用表级约束语法
+  create table primary_test3
+  (
+    test_name varchar(255),
+    test_pass varchar(255)
+    #建立多列组合的主键约束
+    primary key (test_name,test_pass)
+  );
+  #删除主键约束
+  alter table primary_test3 drop primary key;
+  #使用表级约束语法增加主键约束
+  alter table primary_test3 add primary key (test_name,test_pass);
+  #使用列级约束语法增加主键约束
+  alter table primary_test3 modify test_name varchar(255) primary key;
+  #建立主键约束，使用自增长
+  create table primary_test4
+  (
+    #建立主键约束，使用自动增长
+    test_id  int auto_increment primary key,
+    test_name varchar(255),
+    test_pass varchar(255)
+  ) engine=InnoDB defualt charset=utf8;
+  #向自动增长表中插入数据
+  insert into primary_test4(test_name,test_pass) values  ('王振文','12313');
+  #查看字段编码： SHOW FULL COLUMNS FROM primary_test4;
+  
     
